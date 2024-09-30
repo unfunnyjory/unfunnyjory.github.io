@@ -1,0 +1,46 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>topbar</title>
+<base target="contents">
+<script language="JavaScript">
+<!--
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+</head>
+
+<body onload="FP_preloadImgs(/*url*/'buttons/programs/Programs_Hover.jpg', /*url*/'buttons/programs/Programs_Clicked.jpg', /*url*/'buttons/home/Home_Hover.jpg', /*url*/'buttons/home/Home_Clicked.jpg')">
+
+<p>
+<img border="0" src="../images/Logo.gif" width="147" height="39" align="left"></p>
+<div style="position: absolute; width: 521px; height: 75px; z-index: 1; top: 25px; float: right; right: 0px" id="layer1">
+	<p align="right"><a target="_top" href="../programs.htm">
+	<img border="0" id="img1" src="buttons/programs/Programs.jpg" height="20" width="100" alt="Programs" fp-style="fp-btn: Embossed Rectangle 3" fp-title="Programs" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'buttons/programs/Programs_Hover.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'buttons/programs/Programs.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'buttons/programs/Programs_Clicked.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'buttons/programs/Programs_Hover.jpg')" align="right"></a><a href="index.htm" target="_top">
+	</a><a target="_top" href="../index.htm">
+	<img border="0" id="img2" src="buttons/home/Home.jpg" height="20" width="100" alt="Home" onmouseover="FP_swapImg(1,0,/*id*/'img2',/*url*/'buttons/home/Home_Hover.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img2',/*url*/'buttons/home/Home.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img2',/*url*/'buttons/home/Home_Clicked.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img2',/*url*/'buttons/home/Home_Hover.jpg')" fp-style="fp-btn: Embossed Rectangle 3" fp-title="Home"></a></div>
+
+</body>
+
+</html>
